@@ -1,0 +1,1018 @@
+/* ==========================================================================
+   Text utilities
+   ========================================================================== */
+
+/**
+ * Horizontal text alignment
+ */
+
+.u-textCenter {
+    text-align: center !important;
+}
+
+.u-textLeft {
+    text-align: left !important;
+}
+
+.u-textRight {
+    text-align: right !important;
+}
+
+/**
+ * Text truncation
+ *
+ * Prevent text from wrapping onto multiple lines, and truncate with an
+ * ellipsis.
+ *
+ * 1. Ensure that the node has a maximum width after which truncation can
+ *    occur.
+ * 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+ *    nodes.
+ */
+
+.u-textTruncate {
+    max-width: 100%; /* 1 */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important; /* 2 */
+}
+
+/**
+ * Word breaking
+ *
+ * Break strings when their length exceeds the width of their container.
+ */
+
+.u-textBreak {
+    word-wrap: break-word !important;
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+
+.u-textInheritColor {
+    color: inherit !important;
+}
+
+/**
+ * Inherit the ancestor's text color for all states.
+ */
+
+.u-textInheritAllColor,
+.u-textInheritAllColor:hover,
+.u-textInheritAllColor:focus,
+.u-textInheritAllColor:active {
+    color: inherit !important;
+}
+
+/* ==========================================================================
+   Dimension utilities
+   ========================================================================== */
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit,
+.u-sizeFitAlt {
+    display: block !important;
+    float: left !important;
+    width: auto !important;
+}
+
+.u-sizeFitAlt {
+    float: right !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.u-sizeFill {
+    display: block !important;
+    overflow: hidden !important;
+    width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.u-sizeFillAlt {
+    display: table-cell !important;
+    max-width: 100% !important;
+    width: 10000px !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.u-sizeFull {
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+
+.u-size1of12 {
+    width: 8.333% !important;
+}
+
+.u-size1of10 {
+    width: 10% !important;
+}
+
+.u-size1of8 {
+    width: 12.5% !important;
+}
+
+.u-size1of6,
+.u-size2of12 {
+    width: 16.667% !important;
+}
+
+.u-size1of5,
+.u-size2of10 {
+    width: 20% !important;
+}
+
+.u-size1of4,
+.u-size2of8,
+.u-size3of12 {
+    width: 25% !important;
+}
+
+.u-size3of10 {
+    width: 30% !important;
+}
+
+.u-size1of3,
+.u-size2of6,
+.u-size4of12 {
+    width: 33.333% !important;
+}
+
+.u-size3of8 {
+    width: 37.5% !important;
+}
+
+.u-size2of5,
+.u-size4of10 {
+    width: 40% !important;
+}
+
+.u-size5of12 {
+    width: 41.667% !important;
+}
+
+.u-size1of2,
+.u-size2of4,
+.u-size3of6,
+.u-size4of8,
+.u-size5of10,
+.u-size6of12 {
+    width: 50% !important;
+}
+
+.u-size7of12 {
+    width: 58.333% !important;
+}
+
+.u-size3of5,
+.u-size6of10 {
+    width: 60% !important;
+}
+
+.u-size5of8 {
+    width: 62.5% !important;
+}
+
+.u-size2of3,
+.u-size4of6,
+.u-size8of12 {
+    width: 66.667% !important;
+}
+
+.u-size7of10 {
+    width: 70% !important;
+}
+
+.u-size3of4,
+.u-size6of8,
+.u-size9of12 {
+    width: 75% !important;
+}
+
+.u-size4of5,
+.u-size8of10 {
+    width: 80% !important;
+}
+
+.u-size5of6,
+.u-size10of12 {
+    width: 83.333% !important;
+}
+
+.u-size7of8 {
+    width: 87.5% !important;
+}
+
+.u-size9of10 {
+    width: 90% !important;
+}
+
+.u-size11of12 {
+    width: 91.667% !important;
+}
+
+/* ==========================================================================
+   Dimension utilities (breakpoint 1)
+   ========================================================================== */
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.v1-u-sizeFit,
+.v1-u-sizeFitAlt {
+    display: block !important;
+    float: left !important;
+    width: auto !important;
+}
+
+.v1-u-sizeFitAlt {
+    float: right !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.v1-u-sizeFill {
+    display: block !important;
+    overflow: hidden !important;
+    width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.v1-u-sizeFillAlt {
+    display: table-cell !important;
+    max-width: 100% !important;
+    width: 10000px !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.v1-u-sizeFull {
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+
+.v1-u-size1of12 {
+    width: 8.333% !important;
+}
+
+.v1-u-size1of10 {
+    width: 10% !important;
+}
+
+.v1-u-size1of8 {
+    width: 12.5% !important;
+}
+
+.v1-u-size1of6,
+.v1-u-size2of12 {
+    width: 16.667% !important;
+}
+
+.v1-u-size1of5,
+.v1-u-size2of10 {
+    width: 20% !important;
+}
+
+.v1-u-size1of4,
+.v1-u-size2of8,
+.v1-u-size3of12 {
+    width: 25% !important;
+}
+
+.v1-u-size3of10 {
+    width: 30% !important;
+}
+
+.v1-u-size1of3,
+.v1-u-size2of6,
+.v1-u-size4of12 {
+    width: 33.333% !important;
+}
+
+.v1-u-size3of8 {
+    width: 37.5% !important;
+}
+
+.v1-u-size2of5,
+.v1-u-size4of10 {
+    width: 40% !important;
+}
+
+.v1-u-size5of12 {
+    width: 41.667% !important;
+}
+
+.v1-u-size1of2,
+.v1-u-size2of4,
+.v1-u-size3of6,
+.v1-u-size4of8,
+.v1-u-size5of10,
+.v1-u-size6of12 {
+    width: 50% !important;
+}
+
+.v1-u-size7of12 {
+    width: 58.333% !important;
+}
+
+.v1-u-size3of5,
+.v1-u-size6of10 {
+    width: 60% !important;
+}
+
+.v1-u-size5of8 {
+    width: 62.5% !important;
+}
+
+.v1-u-size2of3,
+.v1-u-size4of6,
+.v1-u-size8of12 {
+    width: 66.667% !important;
+}
+
+.v1-u-size7of10 {
+    width: 70% !important;
+}
+
+.v1-u-size3of4,
+.v1-u-size6of8,
+.v1-u-size9of12 {
+    width: 75% !important;
+}
+
+.v1-u-size4of5,
+.v1-u-size8of10 {
+    width: 80% !important;
+}
+
+.v1-u-size5of6,
+.v1-u-size10of12 {
+    width: 83.333% !important;
+}
+
+.v1-u-size7of8 {
+    width: 87.5% !important;
+}
+
+.v1-u-size9of10 {
+    width: 90% !important;
+}
+
+.v1-u-size11of12 {
+    width: 91.667% !important;
+}
+
+/* ==========================================================================
+   Dimension utilities (breakpoint 2)
+   ========================================================================== */
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.v2-u-sizeFit,
+.v2-u-sizeFitAlt {
+    display: block !important;
+    float: left !important;
+    width: auto !important;
+}
+
+.v2-u-sizeFitAlt {
+    float: right !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.v2-u-sizeFill {
+    display: block !important;
+    overflow: hidden !important;
+    width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.v2-u-sizeFillAlt {
+    display: table-cell !important;
+    max-width: 100% !important;
+    width: 10000px !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.v2-u-sizeFull {
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+
+.v2-u-size1of12 {
+    width: 8.333% !important;
+}
+
+.v2-u-size1of10 {
+    width: 10% !important;
+}
+
+.v2-u-size1of8 {
+    width: 12.5% !important;
+}
+
+.v2-u-size1of6,
+.v2-u-size2of12 {
+    width: 16.667% !important;
+}
+
+.v2-u-size1of5,
+.v2-u-size2of10 {
+    width: 20% !important;
+}
+
+.v2-u-size1of4,
+.v2-u-size2of8,
+.v2-u-size3of12 {
+    width: 25% !important;
+}
+
+.v2-u-size3of10 {
+    width: 30% !important;
+}
+
+.v2-u-size1of3,
+.v2-u-size2of6,
+.v2-u-size4of12 {
+    width: 33.333% !important;
+}
+
+.v2-u-size3of8 {
+    width: 37.5% !important;
+}
+
+.v2-u-size2of5,
+.v2-u-size4of10 {
+    width: 40% !important;
+}
+
+.v2-u-size5of12 {
+    width: 41.667% !important;
+}
+
+.v2-u-size1of2,
+.v2-u-size2of4,
+.v2-u-size3of6,
+.v2-u-size4of8,
+.v2-u-size5of10,
+.v2-u-size6of12 {
+    width: 50% !important;
+}
+
+.v2-u-size7of12 {
+    width: 58.333% !important;
+}
+
+.v2-u-size3of5,
+.v2-u-size6of10 {
+    width: 60% !important;
+}
+
+.v2-u-size5of8 {
+    width: 62.5% !important;
+}
+
+.v2-u-size2of3,
+.v2-u-size4of6,
+.v2-u-size8of12 {
+    width: 66.667% !important;
+}
+
+.v2-u-size7of10 {
+    width: 70% !important;
+}
+
+.v2-u-size3of4,
+.v2-u-size6of8,
+.v2-u-size9of12 {
+    width: 75% !important;
+}
+
+.v2-u-size4of5,
+.v2-u-size8of10 {
+    width: 80% !important;
+}
+
+.v2-u-size5of6,
+.v2-u-size10of12 {
+    width: 83.333% !important;
+}
+
+.v2-u-size7of8 {
+    width: 87.5% !important;
+}
+
+.v2-u-size9of10 {
+    width: 90% !important;
+}
+
+.v2-u-size11of12 {
+    width: 91.667% !important;
+}
+
+/* ==========================================================================
+   Dimension utilities (breakpoint 3)
+   ========================================================================== */
+
+/* Intrinsic widths
+   ========================================================================== */
+
+/**
+ * Make an element shrink wrap its content.
+ */
+
+.v3-u-sizeFit,
+.v3-u-sizeFitAlt {
+    display: block !important;
+    float: left !important;
+    width: auto !important;
+}
+
+.v3-u-sizeFitAlt {
+    float: right !important;
+}
+
+/**
+ * Make an element fill the remaining space.
+ * N.B. This will hide overflow.
+ */
+
+.v3-u-sizeFill {
+    display: block !important;
+    overflow: hidden !important;
+    width: auto !important;
+}
+
+/**
+ * An alternative method to make an element fill the remaining space.
+ * N.B. Do not use if child elements might be wider than the remaining space.
+ * In Chrome, Safari, and Firefox it results in undesired layout.
+ */
+
+.v3-u-sizeFillAlt {
+    display: table-cell !important;
+    max-width: 100% !important;
+    width: 10000px !important;
+}
+
+/**
+ * Make an element the width of its parent.
+ */
+
+.v3-u-sizeFull {
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* Proportional widths
+   ========================================================================== */
+
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ */
+
+.v3-u-size1of12 {
+    width: 8.333% !important;
+}
+
+.v3-u-size1of10 {
+    width: 10% !important;
+}
+
+.v3-u-size1of8 {
+    width: 12.5% !important;
+}
+
+.v3-u-size1of6,
+.v3-u-size2of12 {
+    width: 16.667% !important;
+}
+
+.v3-u-size1of5,
+.v3-u-size2of10 {
+    width: 20% !important;
+}
+
+.v3-u-size1of4,
+.v3-u-size2of8,
+.v3-u-size3of12 {
+    width: 25% !important;
+}
+
+.v3-u-size3of10 {
+    width: 30% !important;
+}
+
+.v3-u-size1of3,
+.v3-u-size2of6,
+.v3-u-size4of12 {
+    width: 33.333% !important;
+}
+
+.v3-u-size3of8 {
+    width: 37.5% !important;
+}
+
+.v3-u-size2of5,
+.v3-u-size4of10 {
+    width: 40% !important;
+}
+
+.v3-u-size5of12 {
+    width: 41.667% !important;
+}
+
+.v3-u-size1of2,
+.v3-u-size2of4,
+.v3-u-size3of6,
+.v3-u-size4of8,
+.v3-u-size5of10,
+.v3-u-size6of12 {
+    width: 50% !important;
+}
+
+.v3-u-size7of12 {
+    width: 58.333% !important;
+}
+
+.v3-u-size3of5,
+.v3-u-size6of10 {
+    width: 60% !important;
+}
+
+.v3-u-size5of8 {
+    width: 62.5% !important;
+}
+
+.v3-u-size2of3,
+.v3-u-size4of6,
+.v3-u-size8of12 {
+    width: 66.667% !important;
+}
+
+.v3-u-size7of10 {
+    width: 70% !important;
+}
+
+.v3-u-size3of4,
+.v3-u-size6of8,
+.v3-u-size9of12 {
+    width: 75% !important;
+}
+
+.v3-u-size4of5,
+.v3-u-size8of10 {
+    width: 80% !important;
+}
+
+.v3-u-size5of6,
+.v3-u-size10of12 {
+    width: 83.333% !important;
+}
+
+.v3-u-size7of8 {
+    width: 87.5% !important;
+}
+
+.v3-u-size9of10 {
+    width: 90% !important;
+}
+
+.v3-u-size11of12 {
+    width: 91.667% !important;
+}
+
+/* ==========================================================================
+   Display utilities
+   ========================================================================== */
+
+/**
+ * Display-type utilities
+ */
+
+.u-inline {
+    display: inline !important;
+}
+
+.u-inlineBlock {
+    display: inline-block !important;
+}
+
+.u-block {
+    display: block !important;
+}
+
+.u-table {
+    display: table !important;
+}
+
+.u-tableCell {
+    display: table-cell !important;
+}
+
+/*! suit-test v0.1.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   SUIT: Test
+   ========================================================================== */
+
+/**
+ * The 'describe' CSS counter
+ */
+
+.Test {
+    counter-reset: test-describe;
+}
+
+.Test-describe:before {
+    content: counter(test-describe);
+    counter-increment: test-describe;
+}
+
+/**
+ * The 'it' CSS counter
+ */
+
+.Test-describe {
+    counter-reset: test-it;
+}
+
+.Test-it:before {
+    content: counter(test-describe) "." counter(test-it);
+    counter-increment: test-it;
+}
+
+/**
+ * The test title
+ */
+
+.Test-title {
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 20px;
+    margin: 20px 0;
+    background: #eee;
+    color: #999;
+}
+
+/**
+ * The test description and expectation titles
+ */
+
+.Test-describe,
+.Test-it {
+    background: #eee;
+    border-left: 5px solid #666;
+    color: #666;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0.75em 20px;
+}
+
+.Test-describe {
+    font-size: 1.5em;
+    margin: 60px 0 20px;
+}
+
+.Test-describe:before,
+.Test-it:before {
+    color: #999;
+    display: inline-block;
+    margin-right: 10px;
+    min-width: 30px;
+    text-transform: uppercase;
+}
+
+/*! suit-arrange v0.2.0 | MIT License | github.com/suitcss */
+
+/* ==========================================================================
+   Arrange cells
+   ========================================================================== */
+
+/**
+ * This component lets you lay out a row of cells in various ways. You can
+ * specify whether a cell should be wide enough to fit its content, or take up
+ * the remaining space in the row. It's also possible to give all cells an
+ * equal width, and to control their vertical alignment.
+ *
+ * `Arrange` must only contain 'Arrange-sizeFit' and 'Arrange-sizeFill' child
+ * nodes.
+ *
+ * It's recommended that you only use one 'Arrange-sizeFill' per component
+ * instance (unless using the `Arrange--equally` modifier; see below). The
+ * first 'Arrange-sizeFill' in the component's source order will not share the
+ * extra space with any subsequent nodes of that class.
+ *
+ * Example HTML:
+ *
+ * <div class="Arrange [Arrange--middle|Arrange--bottom|Arrange--equal]">
+ *     <div class="Arrange-sizeFit">
+ *         [content]
+ *     </div>
+ *     <div class="Arrange-sizeFill">
+ *         [content]
+ *     </div>
+ *     <div class="Arrange-sizeFit">
+ *         [content]
+ *     </div>
+ * </div>
+ */
+
+/**
+ * 1. Protect against the component expanding beyond the confines of its
+ *    container if properties affecting the box-model are applied to the
+ *    component. Mainly necessary because of (5).
+ * 2. Rely on table layout.
+ * 3. Zero out the default spacing that might be on an element (e.g., `ul`).
+ * 4. Make sure the component fills at least the full width of its parent.
+ * 5. Reset the table-layout algorithm in case a component is nested.
+ */
+
+.Arrange {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; /* 1 */
+    display: table; /* 2 */
+    margin: 0; /* 3 */
+    min-width: 100%; /* 4 */
+    padding: 0; /* 3 */
+    table-layout: auto; /* 5 */
+}
+
+/**
+ * There are two possible types of child.
+ * `sizeFill` will expand to fill all of the remaining space not filled by
+ * `sizeFit` elements.
+ *
+ * 1. Zero out any default spacing that might be on an element (e.g., `li`);
+ *    Margin has no effect when coupled with `display: table-cell`.
+ * 2. All cells are top-aligned by default
+ */
+
+.Arrange-sizeFill,
+.Arrange-sizeFit {
+    display: table-cell;
+    padding: 0; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Make sure the main content block expands to fill the remaining space.
+ */
+
+.Arrange-sizeFill {
+    width: 100%;
+}
+
+/**
+ * Where possible, protect against large images breaking the layout. Prevent them from
+ * exceeding the width of the main content block by making them fluid.
+ *
+ * Only work for all browsers with the `Arrange--equally` variant. For Firefox
+ * and IE to constrain image dimensions for other layouts, large images will
+ * need their width set to `100%`.
+ */
+
+.Arrange-sizeFill img {
+    height: auto;
+    max-width: 100%;
+}
+
+/**
+ * Defend against a side-effect of this layout pattern: images in
+ * 'Arrange-sizeFit' cannot be fluid, otherwise they lose their ability to
+ * provide size to a cell.
+ */
+
+.Arrange-sizeFit img {
+    max-width: none !important;
+    width: auto !important;
+}
+
+/* Vertical alignment modifiers
+   ========================================================================== */
+
+.Arrange--middle .Arrange-sizeFill,
+.Arrange--middle .Arrange-sizeFit {
+    vertical-align: middle;
+}
+
+.Arrange--bottom .Arrange-sizeFill,
+.Arrange--bottom .Arrange-sizeFit {
+    vertical-align: bottom;
+}
+
+/* Equal-width modifier
+   ========================================================================== */
+
+/**
+ * This layout algorithm will create equal-width table cells, irrespective of
+ * the width of their content.
+ */
+
+.Arrange--equal {
+    table-layout: fixed;
+}
+
+/**
+ * Give the cells an equal width. This value ensures that Arrange is still 100%
+ * wide when gutters are used in conjunctions with equal-width cells.
+ *
+ * It's recommended that only 'Arrange-sizeFill' be used for equal width cells.
+ * Their inner images will automatically be responsive.
+ */
+
+.Arrange--equal > .Arrange-sizeFill,
+.Arrange--equal > .Arrange-sizeFit {
+    width: 1%;
+}
