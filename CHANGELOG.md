@@ -1,5 +1,11 @@
 === HEAD
 
+=== 0.3.0 (March 31, 2014)
+
+* Add npm support.
+* Re-introduce the gutter modifier, relying on a variable for configuration.
+* Stop using CSSLint.
+
 === 0.2.0 (November 13, 2013)
 
 * Remove gutter modifier; add instructions for it to README.

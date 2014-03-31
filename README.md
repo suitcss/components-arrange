@@ -1,6 +1,6 @@
-# SUIT arrange
+# SUIT components-arrange
 
-[![Build Status](https://secure.travis-ci.org/suitcss/arrange.png?branch=master)](http://travis-ci.org/suitcss/arrange)
+[![Build Status](https://secure.travis-ci.org/suitcss/components-arrange.png?branch=master)](http://travis-ci.org/suitcss/components-arrange)
 
 A SUIT component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
@@ -8,23 +8,27 @@ cells. Makes use of CSS table layout.
 
 Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
-[Live test rendering](http://suitcss.github.io/arrange/test.html)
-
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-arrange`
-* [Component(1)](http://component.io/): `component install suitcss/arrange`
-* Download: [zip](https://github.com/suitcss/arrange/zipball/master)
-* Git: `git clone https://github.com/suitcss/arrange.git`
+* [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
+* [npm](http://npmjs.org/): `npm install suitcss-components-arrange`
+* [Bower](http://bower.io/): `bower install suit-components-arrange`
+* Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
 
 ## Available classes
 
 * `Arrange` - The core component class
-* `Arrange-sizeFit` - The child class for cells to snap to fit their content
-* `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
 * `Arrange--middle` - The modifier class for middle-aligned cells
 * `Arrange--bottom` - The modifier class for bottom-aligned cells
 * `Arrange--equal` - The modifier class for equal-width cells
+* `Arrange--withGutter` - The modifier class for adding a gutter between cells.
+* `Arrange-sizeFit` - The child class for cells to snap to fit their content
+* `Arrange-sizeFill` - The child class for cells to expand to fill the remaining space
+
+## Configurable variables
+
+* `var-gutter-size-Arrange`: the width of the gutter applied by the
+  `Arrange--withGutter` modifier class.
 
 ## Usage
 
@@ -35,14 +39,14 @@ that is extended by additional modifier classes. This component works best for
 small-scale UI layout, for example, image-content pairs:
 
 ```html
-<div class="Arrange">
-    <div class="Arrange-sizeFit">
-        <img src="img.png" alt="">
-    </div>
-    <div class="Arrange-sizeFill">
-        Nicolas Gallagher @necolas
-        …
-    </div>
+<div class="Arrange Arrange--middle Arrange--withGutter">
+  <div class="Arrange-sizeFit">
+    <img src="img.png" alt="">
+  </div>
+  <div class="Arrange-sizeFill">
+    Nicolas Gallagher @necolas
+    …
+  </div>
 </div>
 ```
 
@@ -50,67 +54,42 @@ Or for an equally spaced row of buttons or icons, etc.
 
 ```html
 <ul class="Arrange Arrange--equal">
-    <li class="Arrange-sizeFill">
-        <button class="Button">Reply</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Like</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Save</button>
-    </li>
-    <li class="Arrange-sizeFill">
-        <button class="Button">Remove</button>
-    </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button Button--full">Reply</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button Button--full">Like</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button Button--full">Save</button>
+  </li>
+  <li class="Arrange-sizeFill">
+    <button class="Button Button--full">Remove</button>
+  </li>
 </ul>
-```
-
-### Adding gutters
-
-The grid component includes no gutters by default. In your app's CSS, the
-component can be extended with modifier classes for your gutter sizes.
-
-```css
-/**
- * @requires suit-arrange
- */
-
-/**
- * Arrange gutters: 20px
- * NOTE: this can trigger a horizontal scrollbar if the component is as wide as
- * the viewport. Use padding on a container, or `overflow-x:hidden` to protect
- * against it.
- */
-
-.Arrange--withGutter {
-    margin: 0 -10px;
-}
-
-.Arrange--withGutter > .Arrange-sizeFit,
-.Arrange--withGutter > .Arrange-sizeFill {
-    padding: 0 10px;
-}
 ```
 
 ## Testing
 
-Install [Node](http://nodejs.org) (comes with npm). It's recommended that you
-also globally install [Component(1)](http://component.io): `npm install -g
-component`.
-
-From the repo root, install the project's development dependencies:
+Install [Node](http://nodejs.org) (comes with npm).
 
 ```
-make
+npm install
 ```
 
-To run the CSS Lint tests and build the front-end development bundle:
+To generate a build:
 
 ```
-make test
+npm run build
 ```
 
-Visual tests are in `test.html`.
+To generate the testing build.
+
+```
+npm run build-test
+```
+
+Basic visual tests are in `test.html`.
 
 ## Browser support
 
