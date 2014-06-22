@@ -1,17 +1,17 @@
-# SUIT components-arrange
+# SUIT CSS components-arrange
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-arrange.png?branch=master)](http://travis-ci.org/suitcss/components-arrange)
 
-A SUIT component for horizontally and vertically arranging a single row of
+A SUIT CSS component for horizontally and vertically arranging a single row of
 cells. Includes modifier classes for equal-width cells and gutter-separated
 cells. Makes use of CSS table layout.
 
-Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
+Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
 * [npm](http://npmjs.org/): `npm install suitcss-components-arrange`
+* [Component(1)](https://github.com/component/component): `component install suitcss/components-arrange`
 * [Bower](http://bower.io/): `bower install suit-components-arrange`
 * Download: [zip](https://github.com/suitcss/utils-after/zipball/master)
 
@@ -27,14 +27,14 @@ Read more about [SUIT's design principles](https://github.com/suitcss/suit/).
 
 ## Configurable variables
 
-* `var-gutter-size-Arrange`: the width of the gutter applied by the
+* `--gutter-size-Arrange`: the width of the gutter applied by the
   `Arrange--withGutter` modifier class.
 
 ## Usage
 
 N.B. This component affects the width of images in cells.
 
-Like many SUIT components, suit-arrange relies on a core component class
+Like many SUIT CSS components, `Arrange` relies on a core component class
 that is extended by additional modifier classes. This component works best for
 small-scale UI layout, for example, image-content pairs:
 
@@ -55,16 +55,16 @@ Or for an equally spaced row of buttons or icons, etc.
 ```html
 <ul class="Arrange Arrange--equal">
   <li class="Arrange-sizeFill">
-    <button class="Button Button--full">Reply</button>
+    <button class="Button u-sizeFull">Reply</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button Button--full">Like</button>
+    <button class="Button u-sizeFull">Like</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button Button--full">Save</button>
+    <button class="Button u-sizeFull">Save</button>
   </li>
   <li class="Arrange-sizeFill">
-    <button class="Button Button--full">Remove</button>
+    <button class="Button u-sizeFull">Remove</button>
   </li>
 </ul>
 ```
@@ -89,7 +89,7 @@ To generate the testing build.
 npm run build-test
 ```
 
-Basic visual tests are in `test.html`.
+Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
