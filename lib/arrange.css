@@ -106,6 +106,7 @@
  */
 
 .Arrange--equal {
+  width: 100%; /* 1 */
   table-layout: fixed;
   width: 100%; /* 1 */
 }
