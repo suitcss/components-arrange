@@ -1,5 +1,22 @@
 === HEAD
 
+=== 0.6.2 (November 18, 2014)
+
+* Fix equal-width modifier layout calculation.
+
+=== 0.6.1 (October 28, 2014)
+
+* Add support for JS bundling.
+
+=== 0.6.0 (June 26 2014)
+
+* Change variable names.
+
+=== 0.5.2 (June 24, 2014)
+
+Add `.css` extension to imports for interoperability.
+
+=== 0.5.1 (June 21, 2014)
 === 0.5.0 (June 21, 2014)
 
 * npm-based workflow.
