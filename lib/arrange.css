@@ -142,3 +142,43 @@
 .Arrange--withGutter > .Arrange-sizeFill {
   padding: 0 calc(0.5 * var(--Arrange-gutter-size));
 }
+
+/**
+ * Full width --equal + --withGutter
+ *
+ * Distribute the first and last cell's outer paddings among the inner cells
+ * so that Arrange can span full width of container
+ *
+ * Background: https://github.com/suitcss/components-arrange/issues/8
+ * NOTE: this fix doesn't work on IE<9;
+ *
+ * 1. IE8 and below reset.
+ */
+
+.Arrange--withGutter.Arrange--equal {
+  margin: 0;
+  margin: 0 calc(-0.5 * var(--Arrange-gutter-size))\9;  /* 1 */
+} 
+
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFit:first-child,
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFill:first-child {
+  padding-right: calc(0.75 * var(--Arrange-gutter-size));
+  padding-left: 0;
+  padding: 0 calc(0.5 * var(--Arrange-gutter-size))\9; /* 1 */
+}
+
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFit:nth-child(2),
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFill:nth-child(2) {
+  padding-left: calc(0.25 * var(--Arrange-gutter-size));
+}
+
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFit:nth-last-child(2),
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFill:nth-last-child(2) {
+  padding-right: calc(0.25 * var(--Arrange-gutter-size));
+}
+
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFit:last-child,
+.Arrange--withGutter.Arrange--equal > .Arrange-sizeFill:last-child {
+  padding-right: 0;
+  padding-left: calc(0.75 * var(--Arrange-gutter-size));
+}
