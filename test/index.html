@@ -18,6 +18,10 @@
     background: yellow;
   }
 
+  .u-hidden {
+    display: none !important;
+  }
+
   /**
    * Padding equal to half the size of the test gutter. Prevents horizontal
    * scrollbar on these full-width tests.
@@ -261,4 +265,30 @@
       </div>
     </div>
   </div>
+  <h3 class="Test-it">renders ok if you make very wide svg images full width in Arrange-sizeFill</h3>
+  <div class="Test-run">
+    <svg xmlns="http://www.w3.org/2000/svg" class="u-hidden">
+      <symbol viewBox="0 0 100 100" id="star">
+        <path d="M50,3l12,36h38l-30,22l11,36l-31-21l-31,21l11-36l-30-22h38z" fill="#FF0" stroke="#FC0" stroke-width="2"/>
+      </symbol>
+    </svg>
+
+    <div class="Arrange">
+      <div class="Arrange-sizeFit dev-highlight">
+        <svg width="120" height="120"><use xlink:href="#star"></use></svg>
+      </div>
+      <div class="Arrange-sizeFill u-textBreak dev-highlight">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <svg width="750" height="150"><use xlink:href="#star"></use></svg>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id massa dui. In quam sapien, vulputate ut ultrices eu, ultricies non felis. Donec nisi diam, accumsan viverra laoreet sed, ultricies ut lacus. Sed sed iaculis sapien. Phasellus nec massa elit. Nullam rutrum, sapien non semper fermentum, mauris libero eleifend diam, ac rhoncus risus metus sed magna. Duis venenatis, orci at fermentum pulvinar, est diam consequat eros, in tristique neque ligula commodo lorem. Pellentesque eleifend mollis tincidunt. Donec a porta nisl. Phasellus ultrices rutrum odio tincidunt tristique. In hac habitasse platea dictumst. Proin nec massa ultrices est fermentum pretium sed non elit. Aenean nec erat augue.</p>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <svg width="80" height="80"><use xlink:href="#star"></use></svg>
+      </div>
+      <div class="Arrange-sizeFit dev-highlight">
+        <svg  width="40" height="40"><use xlink:href="#star"></use></svg>
+      </div>
+    </div>
+  </div>
+
 </div>
