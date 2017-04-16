@@ -64,7 +64,8 @@
  * need their width set to `100%`.
  */
 
-.Arrange-sizeFill img {
+.Arrange-sizeFill img,
+.Arrange-sizeFill svg {
   height: auto;
   max-width: 100%;
 }
@@ -75,7 +76,8 @@
  * provide size to a cell.
  */
 
-.Arrange-sizeFit img {
+.Arrange-sizeFit img,
+.Arrange-sizeFit svg {
   max-width: none !important;
   width: auto !important;
 }
